@@ -46,12 +46,14 @@ Partial Class Form5
         ' 
         ' Textbox
         ' 
+        Textbox.Cursor = Cursors.WaitCursor
         Textbox.Location = New Point(546, 127)
         Textbox.Multiline = True
         Textbox.Name = "Textbox"
         Textbox.ReadOnly = True
         Textbox.Size = New Size(327, 608)
         Textbox.TabIndex = 55
+        Textbox.TabStop = False
         Textbox.TextAlign = HorizontalAlignment.Center
         ' 
         ' Txtnum
@@ -62,7 +64,7 @@ Partial Class Form5
         Txtnum.Multiline = True
         Txtnum.Name = "Txtnum"
         Txtnum.ReadOnly = True
-        Txtnum.Size = New Size(295, 67)
+        Txtnum.Size = New Size(285, 84)
         Txtnum.TabIndex = 0
         Txtnum.TextAlign = HorizontalAlignment.Right
         ' 
@@ -95,7 +97,7 @@ Partial Class Form5
         ' 
         ' Btn4
         ' 
-        Btn4.Location = New Point(786, 251)
+        Btn4.Location = New Point(793, 251)
         Btn4.Name = "Btn4"
         Btn4.Size = New Size(62, 46)
         Btn4.TabIndex = 4
@@ -167,7 +169,7 @@ Partial Class Form5
         ' 
         ' Btndoublezero
         ' 
-        Btndoublezero.Location = New Point(799, 381)
+        Btndoublezero.Location = New Point(793, 381)
         Btndoublezero.Name = "Btndoublezero"
         Btndoublezero.Size = New Size(52, 46)
         Btndoublezero.TabIndex = 12
@@ -236,7 +238,7 @@ Partial Class Form5
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = My.Resources.Resources.calculator_image
         BackgroundImageLayout = ImageLayout.Stretch
-        ClientSize = New Size(1049, 692)
+        ClientSize = New Size(1066, 753)
         Controls.Add(Btnequal)
         Controls.Add(Btnclear)
         Controls.Add(Btndiv)
@@ -258,6 +260,7 @@ Partial Class Form5
         Controls.Add(Txtnum)
         Controls.Add(Textbox)
         Font = New Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        FormBorderStyle = FormBorderStyle.FixedSingle
         Margin = New Padding(4)
         Name = "Form5"
         StartPosition = FormStartPosition.CenterScreen
