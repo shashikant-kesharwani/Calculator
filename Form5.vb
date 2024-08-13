@@ -97,4 +97,72 @@
             Txtnum.Text = num1 / num2
         End If
     End Sub
+
+    Private Sub Form5_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Btn1.Enabled = False
+        Btn2.Enabled = False
+        Btn3.Enabled = False
+        Btn4.Enabled = False
+        Btn5.Enabled = False
+        Btn6.Enabled = False
+        Btn7.Enabled = False
+        Btn8.Enabled = False
+        Btn9.Enabled = False
+        Btnzero.Enabled = False
+        Btndecimal.Enabled = False
+        Btndoublezero.Enabled = False
+        Btnadd.Enabled = False
+        Btnsub.Enabled = False
+        Btnmulti.Enabled = False
+        Btndiv.Enabled = False
+        Btnequal.Enabled = False
+        Btnclear.Enabled = False
+
+    End Sub
+
+    Private Sub Btnonoff_Click(sender As Object, e As EventArgs) Handles Btnonoff.Click
+        If Btnonoff.Text = "ON" Then
+            Btn1.Enabled = True
+            Btn2.Enabled = True
+            Btn3.Enabled = True
+            Btn4.Enabled = True
+            Btn5.Enabled = True
+            Btn6.Enabled = True
+            Btn7.Enabled = True
+            Btn8.Enabled = True
+            Btn9.Enabled = True
+            Btnzero.Enabled = True
+            Btndecimal.Enabled = True
+            Btndoublezero.Enabled = True
+            Btnadd.Enabled = True
+            Btnsub.Enabled = True
+            Btnmulti.Enabled = True
+            Btndiv.Enabled = True
+            Btnequal.Enabled = True
+            Btnclear.Enabled = True
+            Btnonoff.Text = "OFF"
+        Else
+            Btn1.Enabled = False
+            Btn2.Enabled = False
+            Btn3.Enabled = False
+            Btn4.Enabled = False
+            Btn5.Enabled = False
+            Btn6.Enabled = False
+            Btn7.Enabled = False
+            Btn8.Enabled = False
+            Btn9.Enabled = False
+            Btnzero.Enabled = False
+            Btndecimal.Enabled = False
+            Btndoublezero.Enabled = False
+            Btnadd.Enabled = False
+            Btnsub.Enabled = False
+            Btnmulti.Enabled = False
+            Btndiv.Enabled = False
+            Btnequal.Enabled = False
+            Btnclear.Enabled = False
+            Btnonoff.Text = "ON"
+
+
+        End If
+    End Sub
 End Class

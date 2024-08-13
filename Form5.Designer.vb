@@ -22,6 +22,7 @@ Partial Class Form5
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form5))
         Textbox = New TextBox()
         Txtnum = New TextBox()
         Btn1 = New Button()
@@ -42,6 +43,7 @@ Partial Class Form5
         Btndiv = New Button()
         Btnclear = New Button()
         Btnequal = New Button()
+        Btnonoff = New Button()
         SuspendLayout()
         ' 
         ' Textbox
@@ -59,7 +61,7 @@ Partial Class Form5
         ' Txtnum
         ' 
         Txtnum.BackColor = Color.White
-        Txtnum.BorderStyle = BorderStyle.FixedSingle
+        Txtnum.BorderStyle = BorderStyle.None
         Txtnum.Location = New Point(563, 144)
         Txtnum.Multiline = True
         Txtnum.Name = "Txtnum"
@@ -215,9 +217,9 @@ Partial Class Form5
         ' Btnclear
         ' 
         Btnclear.BackColor = Color.Red
-        Btnclear.Location = New Point(560, 510)
+        Btnclear.Location = New Point(665, 510)
         Btnclear.Name = "Btnclear"
-        Btnclear.Size = New Size(132, 50)
+        Btnclear.Size = New Size(83, 50)
         Btnclear.TabIndex = 17
         Btnclear.Text = "A/C"
         Btnclear.UseVisualStyleBackColor = False
@@ -225,12 +227,22 @@ Partial Class Form5
         ' Btnequal
         ' 
         Btnequal.BackColor = Color.Lime
-        Btnequal.Location = New Point(718, 510)
+        Btnequal.Location = New Point(779, 510)
         Btnequal.Name = "Btnequal"
-        Btnequal.Size = New Size(133, 50)
+        Btnequal.Size = New Size(72, 50)
         Btnequal.TabIndex = 18
         Btnequal.Text = "="
         Btnequal.UseVisualStyleBackColor = False
+        ' 
+        ' Btnonoff
+        ' 
+        Btnonoff.BackColor = Color.Cyan
+        Btnonoff.Location = New Point(560, 510)
+        Btnonoff.Name = "Btnonoff"
+        Btnonoff.Size = New Size(78, 50)
+        Btnonoff.TabIndex = 56
+        Btnonoff.Text = "ON"
+        Btnonoff.UseVisualStyleBackColor = False
         ' 
         ' Form5
         ' 
@@ -239,6 +251,7 @@ Partial Class Form5
         BackgroundImage = My.Resources.Resources.calculator_image
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(1066, 753)
+        Controls.Add(Btnonoff)
         Controls.Add(Btnequal)
         Controls.Add(Btnclear)
         Controls.Add(Btndiv)
@@ -261,10 +274,11 @@ Partial Class Form5
         Controls.Add(Textbox)
         Font = New Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         FormBorderStyle = FormBorderStyle.FixedSingle
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Margin = New Padding(4)
         Name = "Form5"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "Form5"
+        Text = "Calculator"
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -289,4 +303,5 @@ Partial Class Form5
     Friend WithEvents Btndiv As Button
     Friend WithEvents Btnclear As Button
     Friend WithEvents Btnequal As Button
+    Friend WithEvents Btnonoff As Button
 End Class
